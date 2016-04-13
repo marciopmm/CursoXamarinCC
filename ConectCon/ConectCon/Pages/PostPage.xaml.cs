@@ -15,8 +15,6 @@ namespace ConectCon.Pages
 		{
 			InitializeComponent ();
             BindingContext = post;
-
-            txtMensagem.Text = post.Mensagem;
 		}
 	}
 }
