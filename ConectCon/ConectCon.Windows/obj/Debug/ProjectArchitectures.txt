@@ -1,1 +1,0 @@
-E:\Treinamento\Xamarin\ConectCon\ConectCon\ConectCon.Windows\ConectCon.Windows.csproj;neutral
