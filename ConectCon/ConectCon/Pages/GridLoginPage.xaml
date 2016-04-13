@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ConectCon.Pages.GridLoginPage">
+
+  <ContentPage.Content>
+    <Grid HorizontalOptions="FillAndExpand"
+          VerticalOptions="CenterAndExpand"
+          Padding="20">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="200" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="100" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <Image Source="marcio.jpg"
+             Aspect="AspectFit"
+               Grid.Row="0"
+               Grid.Column="0"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               Grid.ColumnSpan="2"/>
+
+      <Label Style="{DynamicResource TitleStyle}"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="CenterAndExpand"
+             HorizontalTextAlignment="Center"
+             Text="LOGIN"
+             Grid.Row="1"
+             Grid.Column="0"
+             Grid.ColumnSpan="2" />
+
+      <Label Style="{DynamicResource CaptionStyle}"
+             Text="Login"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="CenterAndExpand"
+             HorizontalTextAlignment="End"
+             Grid.Row="2"
+             Grid.Column="0" />
+      <Entry x:Name="txtLogin"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="CenterAndExpand"
+             HorizontalTextAlignment="Start"
+             Placeholder="Digite o seu login"
+             Grid.Row="2"
+             Grid.Column="1" />
+
+      <Label Style="{DynamicResource CaptionStyle}"
+             Text="Senha"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="CenterAndExpand"
+             HorizontalTextAlignment="End"
+             Grid.Row="3"
+             Grid.Column="0" />
+      <Entry x:Name="txtSenha"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="CenterAndExpand"
+             HorizontalTextAlignment="Start"
+             Placeholder="Digite o sua senha"
+             IsPassword="True"
+             Grid.Row="3"
+             Grid.Column="1" />
+
+      <StackLayout Padding="30"
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2">
+        <Button x:Name="btnLogin"
+                Text="OK"
+                BackgroundColor="Green"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand" />
+      </StackLayout>
+    </Grid>
+  </ContentPage.Content>
+
+</ContentPage>

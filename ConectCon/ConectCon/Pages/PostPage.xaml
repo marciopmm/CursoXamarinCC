@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ConectCon.Models;assembly=ConectCon.Droid"
+             x:Class="ConectCon.Pages.PostPage">
+  <ContentPage.BindingContext>
+    <local:Post />
+  </ContentPage.BindingContext>
+  <ContentPage.Content>
+  <Grid Padding="40">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="70" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Label HorizontalOptions="FillAndExpand"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="End"
+           Text="UserId" 
+           Grid.Row="0"
+           Grid.Column="0"/>
+    <Entry x:Name="txtUserId"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="Start"
+           Text="{Binding UserId}"
+           Grid.Row="0"
+           Grid.Column="1"/>
+
+    <Label HorizontalOptions="FillAndExpand"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="End"
+           Text="Id"
+           Grid.Row="1"
+           Grid.Column="0"/>
+    <Entry x:Name="txtId"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="Start"
+           Text="{Binding Id}"
+           Grid.Row="1"
+           Grid.Column="1"/>
+
+    <Label HorizontalOptions="FillAndExpand"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="End"
+           Text="Título"
+           Grid.Row="2"
+           Grid.Column="0"/>
+    <Entry x:Name="txtTitulo"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="Start"
+           Text="{Binding Titulo}"
+           Grid.Row="2"
+           Grid.Column="1"/>
+
+    <Label HorizontalOptions="FillAndExpand"
+           VerticalOptions="CenterAndExpand"
+           HorizontalTextAlignment="End"
+           Text="Mensagem"
+           Grid.Row="3"
+           Grid.Column="0"/>
+    <Editor x:Name="txtMensagem"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand"
+            Text="{Binding Mensagem}"
+            HeightRequest="50"
+            Grid.Row="3"
+            Grid.Column="1"/>
+  </Grid>
+  </ContentPage.Content>
+</ContentPage>
