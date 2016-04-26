@@ -22,24 +22,37 @@ namespace ConectCon.Pages
 
         private async void BtnLogin_Clicked(object sender, EventArgs e)
         {
+            
             using (HttpClient http = new HttpClient())
             {
                 http.BaseAddress = new Uri("http://jsonplaceholder.typicode.com/");
 
-                var response = await http.GetAsync("posts/1");
-
-                if (response.IsSuccessStatusCode)
+                try
                 {
-                    string content = await response.Content.ReadAsStringAsync();
+                    var response = await http.GetAsync("posts/1");
+                
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string content = await response.Content.ReadAsStringAsync();
 
-                    Post post = JsonConvert.DeserializeObject<Post>(content);
-                    App.Current.MainPage = new PostPage(post);
+                        Post post = JsonConvert.DeserializeObject<Post>(content);
+                        var masterDetailCCPage = new MasterDetailCCPage();
+                        masterDetailCCPage.Detail = new PostPage(post);
+                        masterDetailCCPage.Master = new MenuPage();
+
+                        App.Current.MainPage = masterDetailCCPage;
+                    }
+                    else
+                    {
+                        await DisplayAlert("O retorno é...", "PORRA NENHUMA", "OK");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    await DisplayAlert("O retorno é...", "PORRA NENHUMA", "OK");
+                    await DisplayAlert("Fodeu", ex.Message, "Fazer o que, né ...");
                 }
             }
+            
         }
     }
 }

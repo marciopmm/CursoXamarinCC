@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Lola Bilola"
+             x:Class="ConectCon.Pages.LolaBilolaPage">
+  <ContentPage.Content>
+    <StackLayout Orientation="Vertical">
+      <Image Source="https://scontent.cdninstagram.com/hphotos-xaf1/t51.2885-15/s320x320/e35/12230807_1660826760866443_493863003_n.jpg" />
+      <Button x:Name="btnForm" Text="Formulário MODAL" />
+    </StackLayout>    
+  </ContentPage.Content>
+</ContentPage>

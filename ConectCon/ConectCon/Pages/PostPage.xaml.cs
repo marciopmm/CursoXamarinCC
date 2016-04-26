@@ -15,6 +15,11 @@ namespace ConectCon.Pages
 		{
 			InitializeComponent ();
             BindingContext = post;
+
+            btnConfig.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new DBConfigPage());
+            };
 		}
 	}
 }
